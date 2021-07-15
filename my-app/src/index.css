@@ -318,3 +318,7 @@ p {
   text-transform: capitalize;
   cursor: pointer;
 }
+section{
+   height: 70vh;
+   background-color: rgb(231, 231, 231);
+}

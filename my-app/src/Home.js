@@ -1,7 +1,11 @@
 import React,{useState} from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-import Image from './image/home8-slider2-img1.png'
+import Image from './image/home8-slider2-img1.png';
+import Image2 from './image/home8-slider2-img1.png';
+import Image3 from './image/home8-slider1-img1.png'
+
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './index.css';
 
 //import Name from './data';
 
@@ -13,22 +17,24 @@ function ControlledCarousel() {
   };
 
   return (
+    <>
+    <section className="container-fluid">
     <Carousel activeIndex={index} onSelect={handleSelect}>
       <Carousel.Item>
         <img
-          className="d-block w-100"
+          className="d-block "
           src={Image}
           alt="First slide"
         />
         <Carousel.Caption>
-          <h3>First slide label</h3>
+          <h3 style={{color:'red'}}>First slide label</h3>
           <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block w-100"
-          src="holder.js/800x400?text=Second slide&bg=282c34"
+          className="d-block w-100 slide-image "
+          src={Image2}
           alt="Second slide"
         />
 
@@ -39,8 +45,8 @@ function ControlledCarousel() {
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block w-100"
-          src="holder.js/800x400?text=Third slide&bg=20232a"
+          className="d-block w-50"
+          src={Image3}
           alt="Third slide"
         />
 
@@ -52,6 +58,8 @@ function ControlledCarousel() {
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
+    </section>       
+</>
   );
 }
 export default ControlledCarousel;
