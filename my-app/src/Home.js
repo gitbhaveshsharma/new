@@ -1,66 +1,47 @@
+/* eslint-disable no-sequences */
 import React,{useState} from 'react';
-import Carousel from 'react-bootstrap/Carousel';
-import Image from './image/home8-slider2-img1.png';
-import Image2 from './image/home8-slider2-img1.png';
-import Image3 from './image/home8-slider1-img1.png'
-
+// import Carousel from 'react-bootstrap/Carousel';
+ import Image from './image/home8-slider1-img1.png';
+ import Image2 from './image/home8-slider2-img1.png';
+// import Image3 from './image/home8-slider1-img1.png'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 
 //import Name from './data';
+let a='he5llo';
 
-function ControlledCarousel() {
-  const [index, setIndex] = useState(0);
-
-  const handleSelect = (selectedIndex, e) => {
-    setIndex(selectedIndex);
-  };
-
-  return (
-    <>
-    <section className="container-fluid">
-    <Carousel activeIndex={index} onSelect={handleSelect}>
-      <Carousel.Item>
-        <img
-          className="d-block "
-          src={Image}
-          alt="First slide"
-        />
-        <Carousel.Caption>
-          <h3 style={{color:'red'}}>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100 slide-image "
-          src={Image2}
-          alt="Second slide"
-        />
-
-        <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-50"
-          src={Image3}
-          alt="Third slide"
-        />
-
-        <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
-        </Carousel.Caption>
-      </Carousel.Item>
-    </Carousel>
-    </section>       
-</>
-  );
-}
-export default ControlledCarousel;
-
+const UseStateBisc = () => {
+  const add = () =>{
+      return 'hello hi';
+  }
+  const app = () =>{
+      return 'app';
+  }
+  const apk= () =>{
+    return 'he5llo';
+  }
+  const textg = () =>{
+    return 'Hello'
+  }
+  const [text, setText] = useState(textg);
+  const clickMe = (e) => {
+    e.preventDefault();
+      if (text === a){
+          setText(add)
+      }
+      else if(text === 'hello hi'){
+             setText(app)
+      }
+      else{
+          setText(apk)
+      }
+  }
+ return (
+     <React.Fragment>
+         <h1>{text}</h1>
+         <button type="button" className='btn' onClick={clickMe} > 
+         Click </button>
+     </React.Fragment>
+ )
+};
+export default UseStateBisc;
