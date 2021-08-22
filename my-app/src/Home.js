@@ -8,20 +8,30 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 
 //import Name from './data';
-let a='he5llo';
+let a= <><img src={Image2} alt='' /> 
+         <h1> welcom</h1>
+         </>;
+let b = <><img src={Image} alt='' style={{ width:'300px'}} /> 
+          <h1> third</h1></>
+let c = <><img src={Image2} alt='' style={{ width:'300px'}} /> 
+          <h1> second</h1></>
 
 const UseStateBisc = () => {
   const add = () =>{
-      return 'hello hi';
+      return b;
+
   }
   const app = () =>{
-      return 'app';
+      return c
+
   }
   const apk= () =>{
-    return 'he5llo';
+    return a;
   }
   const textg = () =>{
-    return 'Hello'
+    return ( 'Hello',
+    <img src={Image} alt='' style={{ width:'300px'}}/>
+    )
   }
   const [text, setText] = useState(textg);
   const clickMe = (e) => {
@@ -29,7 +39,7 @@ const UseStateBisc = () => {
       if (text === a){
           setText(add)
       }
-      else if(text === 'hello hi'){
+      else if(text === b){
              setText(app)
       }
       else{

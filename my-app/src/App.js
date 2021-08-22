@@ -1,4 +1,4 @@
-import Stap from './Home'
+import Stap from './Home/Sofa'
 import './App.css';
 
 function App() {
